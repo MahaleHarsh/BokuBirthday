@@ -31,17 +31,6 @@ if (page === 'intro') {
   });
 }
 
-if (page === 'walk') {
-  $('#walk').addEventListener('click', () => {
-    const stage = $('.walk-stage');
-    stage.classList.remove('play');
-    void stage.offsetWidth;
-    stage.classList.add('play');
-    $('#walk').textContent = 'Walk it again ↻';
-    window.setTimeout(unlock, 3500);
-  });
-}
-
 if (page === 'distance') {
   $('#connect').addEventListener('click', () => {
     $('.route').classList.add('reveal');
@@ -79,7 +68,7 @@ if (page === 'call') {
 if (page === 'final') {
   $('#wish').addEventListener('click', () => {
     celebrate(160);
-    $('#wish').textContent = 'Gift permission granted ✓';
+    $('#wish').textContent = 'Your gift is waiting ✓';
     $('#gift-clearance').classList.add('show');
     window.setTimeout(() => $('#gift-clearance').scrollIntoView({ behavior: 'smooth', block: 'center' }), 450);
   });
