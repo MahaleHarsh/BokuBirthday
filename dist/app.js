@@ -54,17 +54,6 @@ if (page === 'evidence') {
   });
 }
 
-if (page === 'call') {
-  $('.decline').addEventListener('click', () => {
-    $('#call-note').textContent = 'Impossible. Birthday calls from Italy cannot be declined.';
-  });
-  $('.accept').addEventListener('click', () => {
-    $('.screen').innerHTML = '<div class="avatar">♡</div><h2>Happy birthday, Boku.</h2><p>You make every kilometre feel smaller.</p><p>Call connected · dinner mission activated</p>';
-    celebrate(35);
-    window.setTimeout(unlock, 500);
-  });
-}
-
 if (page === 'final') {
   $('#wish').addEventListener('click', () => {
     celebrate(160);
