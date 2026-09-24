@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="surprise.css">
+  <link rel="stylesheet" href="dinner.css">
 </head>
 <body data-page="ticket" class="ticket-page">
   <div class="grain"></div>
@@ -15,7 +16,7 @@
     <section class="chapter-copy">
       <p class="kicker">DATE PLANNING DEPARTMENT · ITALY</p>
       <h1>Your table is <em>waiting.</em></h1>
-      <p>The city remains secret for now. Dinner is only stop number one. A very important ice-cream investigation follows.</p>
+      <p>The city remains secret for now—and dinner is waiting for your very important decision.</p>
       <button class="primary" id="tear">Unseal the date plan →</button>
       <div class="next-wrap"><button class="primary next" data-go="final.html">One last birthday message →</button></div>
     </section>
@@ -26,10 +27,21 @@
         <h2>An Italian Evening</h2>
         <p class="secret-city">Location · one beautiful Italian city<br><small>Revealed when the passenger arrives</small></p>
         <div class="ticket-detail dinner-details">
-          <div><small>DINNER</small><strong>PIZZA + TERRIBLE JOKES</strong></div>
+          <div><small>DINNER</small><strong id="selected-food">WAITING FOR BOKU'S CHOICE</strong></div>
           <div><small>SECOND STOP</small><strong>BASKIN-ROBBINS</strong></div>
           <div><small>OUTFIT</small><strong>WHATEVER MAKES YOU FEEL BEAUTIFUL</strong></div>
         </div>
+        <section class="food-question" id="food-question">
+          <p class="food-kicker">IMPORTANT DATE-NIGHT DECISION</p>
+          <h3>What would you like us to eat?</h3>
+          <div class="food-options">
+            <button data-food="pizza">Pizza in Italy 🍕</button>
+            <button data-food="pasta">A proper pasta date 🍝</button>
+            <button data-food="surprise">You choose for me ✨</button>
+            <button data-food="icecream">I came for the ice cream 🍨</button>
+          </div>
+          <p class="food-answer" id="food-answer" aria-live="polite">Choose carefully. This is highly official date planning.</p>
+        </section>
         <p class="secret-city">You choose the ice-cream flavour. I reserve the romantic right to ask for one spoon—and then steal two.</p>
       </div>
       <div class="tear">TRAVEL NOTE · BOKU MUST FLY TO ITALY SOON ✈</div>
@@ -41,4 +53,3 @@
   <script src="surprise.js"></script>
 </body>
 </html>
-
